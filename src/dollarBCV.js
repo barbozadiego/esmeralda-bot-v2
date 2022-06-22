@@ -9,7 +9,7 @@ const queryHours = {
     "eightMorning": moment('08:00 AM','hh:mm A').format('hh:mm A'),
     "nineMorning": moment('09:03 AM','hh:mm A').format('hh:mm A'),
     "oneAfternoon": moment('01:03 PM','hh:mm A').format('hh:mm A'),
-    "fiveAfternoon": moment('05:35 PM','hh:mm A').format('hh:mm A')
+    "fiveAfternoon": moment('05:45 PM','hh:mm A').format('hh:mm A')
 };
 
 const getPriceDollarBCV = async () => {
