@@ -7,10 +7,10 @@ import { addDollarBCV } from './firebase/firebaseConfig.js';
 const systemDate = moment().utcOffset() 
 
 const queryHours = {
-    "eightMorning": moment('12:00:00 AM','hh:mm:ss A').format('hh:mm:ss A'),
-    "nineMorning": moment('12:10:00 AM','hh:mm:ss A').format('hh:mm:ss A'),
-    "oneAfternoon": moment('01:03:00 PM','hh:mm:ss A').format('hh:mm:ss A'),
-    "fiveAfternoon": moment('05:00:00 PM','hh:mm:ss A').format('hh:mm:ss A')
+    "eightMorning": moment('08:00:00 AM','hh:mm:ss A').format('hh:mm:ss A'),
+    "nineMorning": moment('09:03:00 AM','hh:mm:ss A').format('hh:mm:ss A'),
+    "oneAfternoon": moment('12:20:00 PM','hh:mm:ss A').format('hh:mm:ss A'),
+    "fiveAfternoon": moment('12:25:00 PM','hh:mm:ss A').format('hh:mm:ss A')
 };
 
 const getPriceDollarBCV = async () => {
@@ -46,7 +46,7 @@ const getPriceDollarBCV = async () => {
 };
 
 const initializeScrape = () => {
-    const now = moment().utcOffset(fechaSistema).format('hh:mm:ss A');
+    const now = moment().utcOffset(systemDate).format('hh:mm:ss A');
     const { eightMorning, nineMorning, oneAfternoon, fiveAfternoon } = queryHours;
     
     if(now === eightMorning || now === nineMorning || now === oneAfternoon || now === fiveAfternoon ) {
