@@ -7,8 +7,8 @@ import { addDollarBCV } from './firebase/firebaseConfig.js';
 const systemDate = moment().utcOffset() 
 
 const queryHours = {
-    "eightMorning": moment('11:56:00 AM','hh:mm:ss A').format('hh:mm:ss A'),
-    "nineMorning": moment('12:00:00 AM','hh:mm:ss A').format('hh:mm:ss A'),
+    "eightMorning": moment('12:00:00 AM','hh:mm:ss A').format('hh:mm:ss A'),
+    "nineMorning": moment('12:10:00 AM','hh:mm:ss A').format('hh:mm:ss A'),
     "oneAfternoon": moment('01:03:00 PM','hh:mm:ss A').format('hh:mm:ss A'),
     "fiveAfternoon": moment('05:00:00 PM','hh:mm:ss A').format('hh:mm:ss A')
 };
