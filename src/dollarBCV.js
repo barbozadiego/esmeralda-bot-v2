@@ -5,12 +5,11 @@ import puppeteer from 'puppeteer';
 import { addDollarBCV } from './firebase/firebaseConfig.js';
 
 
-
 const queryHours = {
-    "eightMorning": moment('08:00:00 AM','hh:mm:ss A').format('hh:mm:ss A'),
-    "nineMorning": moment('09:03:00 AM','hh:mm:ss A').format('hh:mm:ss A'),
-    "oneAfternoon": moment('04:00:00 PM','hh:mm:ss A').format('hh:mm:ss A'),
-    "fiveAfternoon": moment('04:15:00 PM','hh:mm:ss A').format('hh:mm:ss A')
+    "eightMorning": moment('08:00 AM','hh:mm A').format('hh:mm A'),
+    "nineMorning": moment('09:03 AM','hh:mm A').format('hh:mm A'),
+    "oneAfternoon": moment('01:03 PM','hh:mm A').format('hh:mm A'),
+    "fiveAfternoon": moment('05:00 PM','hh:mm A').format('hh:mm A')
 };
 
 const getPriceDollarBCV = async () => {
@@ -39,14 +38,14 @@ const getPriceDollarBCV = async () => {
     addDollarBCV({
         "price": priceBCV,
         "day": moment().format('L'),
-        "hour": moment().utcOffset(-240).format('hh:mm:ss A')
+        "hour": moment().utcOffset(-240).format('hh:mm A')
     })
 
     await browser.close();
 };
 
 const initializeScrape = () => {
-    const now = moment().utcOffset(-240).format('hh:mm:ss A');
+    const now = moment().utcOffset(-240).format('hh:mm A');
     const { eightMorning, nineMorning, oneAfternoon, fiveAfternoon } = queryHours;
     
     if(now === eightMorning || now === nineMorning || now === oneAfternoon || now === fiveAfternoon ) {
