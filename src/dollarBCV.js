@@ -14,7 +14,7 @@ const queryHours = {
 
 const getPriceDollarBCV = async () => {
     const browser = await puppeteer.launch({
-             headless: true, 
+             headless: true,
              args: [
                     '--no-sandbox',
                     '--disable-setuid-sandbox'
