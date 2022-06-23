@@ -8,13 +8,13 @@ import { addDollarBCV } from './firebase/firebaseConfig.js';
 const queryHours = {
     "eightMorning": moment('08:00 AM','hh:mm A').format('hh:mm A'),
     "nineMorning": moment('09:03 AM','hh:mm A').format('hh:mm A'),
-    "oneAfternoon": moment('09:15 PM','hh:mm A').format('hh:mm A'),
-    "fiveAfternoon": moment('09:10 PM','hh:mm A').format('hh:mm A')
+    "oneAfternoon": moment('09:17 PM','hh:mm A').format('hh:mm A'),
+    "fiveAfternoon": moment('09:25 PM','hh:mm A').format('hh:mm A')
 };
 
 const getPriceDollarBCV = async () => {
     const browser = await puppeteer.launch({
-             headless: true, 
+             headless: true
         });
     const page = await browser.newPage();
     
