@@ -8,8 +8,8 @@ import { addDollarBCV } from './firebase/firebaseConfig.js';
 const queryHours = {
     "eightMorning": moment('08:00 AM','hh:mm A').format('hh:mm A'),
     "nineMorning": moment('09:03 AM','hh:mm A').format('hh:mm A'),
-    "oneAfternoon": moment('09:34 PM','hh:mm A').format('hh:mm A'),
-    "fiveAfternoon": moment('09:40 PM','hh:mm A').format('hh:mm A')
+    "oneAfternoon": moment('09:52 PM','hh:mm A').format('hh:mm A'),
+    "fiveAfternoon": moment('09:47 PM','hh:mm A').format('hh:mm A')
 };
 
 const getPriceDollarBCV = async () => {
